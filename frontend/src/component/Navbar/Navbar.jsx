@@ -4,10 +4,12 @@ import { FaShopify } from "react-icons/fa";
 import { FaSearch } from "react-icons/fa";
 import { IoCartOutline } from "react-icons/io5";
 import { Link } from 'react-router-dom';
-
+import { useSelector} from "react-redux"
 
 
 const Navbar = () => {
+  let item = useSelector(state=>state)
+  console.log(item)
   return (
     <div className='nav'>
       <div className="top-nav">
@@ -21,7 +23,7 @@ const Navbar = () => {
         </form>
         <div className="cart-box">
         <IoCartOutline />
-        <span>0</span>
+        <span>{item.cart.lenght}</span>
         </div>
       </div>
       <div className="bottom-nav">
