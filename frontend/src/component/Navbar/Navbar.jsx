@@ -3,6 +3,7 @@ import "./Navbar.css"
 import { FaShopify } from "react-icons/fa";
 import { FaSearch } from "react-icons/fa";
 import { IoCartOutline } from "react-icons/io5";
+import { Link } from 'react-router-dom';
 
 
 
@@ -10,10 +11,10 @@ const Navbar = () => {
   return (
     <div className='nav'>
       <div className="top-nav">
-        <div className="logo">
+        <Link to={"/"}><div className="logo">
             <span>V-Shop</span>
             <FaShopify />
-        </div>
+        </div></Link>
         <form className='search-box'>
             <input type="text" placeholder='Search items...' />
             <button><FaSearch /></button>
@@ -24,10 +25,10 @@ const Navbar = () => {
         </div>
       </div>
       <div className="bottom-nav">
-            <li>Home</li>
-            <li>Shop</li>
-            <li>Cart</li>
-            <li>Contact</li>
+            <Link to={"/"}><li>Home</li></Link>
+            <Link to={"/shop"}><li>Shop</li></Link>
+            <Link to={"/cart"}><li>Cart</li></Link>
+            <Link to={"/contact"}><li>Contact</li></Link>
       </div>
     </div>
   );
