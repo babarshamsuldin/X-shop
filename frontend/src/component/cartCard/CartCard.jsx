@@ -19,6 +19,7 @@ const CartCard = ({name, image, price, id}) => {
       <div className="rightcard">
         <button onClick={()=>{
             dispatch(RemoveItem(id))
+            alert("Product Removed Successfully..")
         }}>Remove <RiDeleteBin6Line/></button>
       </div>
     </div>

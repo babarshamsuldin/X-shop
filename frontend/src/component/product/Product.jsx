@@ -15,6 +15,7 @@ const Product = ({name, image, price, id}) => {
         <span>{id}</span>
         <button onClick={()=>{
           dispatch(AddItem({name:name, image:image, price:price, id:id}))
+          alert("Product Added Successfully..")
         }}>Add +</button>
       </div>
     </div>
