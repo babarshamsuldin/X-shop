@@ -21,10 +21,11 @@ const Navbar = () => {
             <input type="text" placeholder='Search items...' />
             <button><FaSearch /></button>
         </form>
-        <div className="cart-box">
+        <Link to={"/cart"}><div className="cart-box">
         <IoCartOutline />
         <span>{item.cart.lenght}</span>
         </div>
+        </Link>
       </div>
       <div className="bottom-nav">
             <Link to={"/"}><li>Home</li></Link>
